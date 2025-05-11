@@ -1,0 +1,42 @@
+{
+    "name": "gnosis-mcp",
+    "hash": "",
+    "description": "Gnosis MCP Agent Service",
+    "image": "",
+    "service_version": "v0.1.0",
+    "home_chain": "gnosis",
+    "configurations": {
+        "gnosis": {
+            "agent_id": 0,
+            "nft": "",
+            "threshold": 1,
+            "use_mech_marketplace": false,
+            "fund_requirements": {
+                "0x0000000000000000000000000000000000000000": {
+                    "agent": 0,
+                    "safe": 0
+                }
+            }
+        }
+    },
+    "env_variables": {
+        "SAFE_CONTRACT_ADDRESSES": {
+            "name": "Safe contract addresses",
+            "description": "",
+            "value": "",
+            "provision_type": "computed"
+        },
+        "GNOSIS_LEDGER_RPC": {
+            "name": "Gnosis ledger RPC",
+            "description": "",
+            "value": "",
+            "provision_type": "computed"
+        },
+        "SEED_PHRASE": {
+            "name": "Seed Phrase",
+            "description": "Wallet seed phrase for the agent",
+            "value": "",
+            "provision_type": "user"
+        }
+    }
+} 

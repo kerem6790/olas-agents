@@ -1,0 +1,108 @@
+{
+    "name": "Memeooorr",
+    "hash": "bafybeidxfdlaeywhnhafix2yzrnbldk5cybwal53o6mtabnamnxmwtprea",
+    "description": "Memeooorr @twitter_handle",
+    "image": "https://gateway.autonolas.tech/ipfs/QmQYDGMg8m91QQkTWSSmANs5tZwKrmvUCawXZfXVVWQPcu",
+    "service_version": "v0.4.2-alpha1",
+    "home_chain": "base",
+    "configurations": {
+        "base": {
+            "agent_id": 43,
+            "nft": "bafybeiaakdeconw7j5z76fgghfdjmsr6tzejotxcwnvmp3nroaw3glgyve",
+            "threshold": 1,
+            "use_mech_marketplace": false,
+            "fund_requirements": {
+                "0x0000000000000000000000000000000000000000": {
+                    "agent": 1000000000000000,
+                    "safe": 12500000000000000
+                }
+            }
+        }
+    },
+    "env_variables": {
+        "BASE_LEDGER_RPC": {
+            "name": "Base ledger RPC",
+            "description": "",
+            "value": "",
+            "provision_type": "computed"
+        },
+        "CELO_LEDGER_RPC": {
+            "name": "Celo ledger RPC",
+            "description": "",
+            "value": "",
+            "provision_type": "computed"
+        },
+        "STORE_PATH": {
+            "name": "Store Path",
+            "description": "",
+            "value": "",
+            "provision_type": "computed"
+        },
+        "STAKING_TOKEN_CONTRACT_ADDRESS": {
+            "name": "Staking token contract address",
+            "description": "",
+            "value": "",
+            "provision_type": "computed"
+        },
+        "ACTIVITY_CHECKER_CONTRACT_ADDRESS": {
+            "name": "Staking activity checker contract address",
+            "description": "",
+            "value": "",
+            "provision_type": "computed"
+        },
+        "TWIKIT_USERNAME": {
+            "name": "Twitter username",
+            "description": "Twitter username of the agent",
+            "value": "username",
+            "provision_type": "user"
+        },
+        "TWIKIT_EMAIL": {
+            "name": "Twitter email",
+            "description": "Twitter email of the agent",
+            "value": "email@mail.com",
+            "provision_type": "user"
+        },
+        "TWIKIT_PASSWORD": {
+            "name": "Twitter password",
+            "description": "Twitter password of the agent",
+            "value": "password",
+            "provision_type": "user"
+        },
+        "TWIKIT_COOKIES": {
+            "name": "Twitter cookies",
+            "description": "Stringified Twitter cookies of the agent",
+            "value": "{\"d_prefs\":\"...\",\"night_mode\":\"...\",\"kdt\":\"...\",\"dnt\":\"...\",\"lang\":\"...\"}",
+            "provision_type": "user"
+        },
+        "GENAI_API_KEY": {
+            "name": "Gemini api key",
+            "description": "Gemini api key to allow the agent to use Gemini",
+            "value": "api_key",
+            "provision_type": "user"
+        },
+        "PERSONA": {
+            "name": "Persona description",
+            "description": "A persona to describe the personality of the agent",
+            "value": "persona",
+            "provision_type": "user"
+        },
+        "FEEDBACK_PERIOD_HOURS": {
+            "name": "Feedback period",
+            "description": "Amount of hours should the agent wait after sending a tweet and before analysing its responses",
+            "value": "1",
+            "provision_type": "fixed"
+        },
+        "MIN_FEEDBACK_REPLIES": {
+            "name": "Minimum feedback replies",
+            "description": "Minimum amount of replies to a tweet before Memeooorr analyses them",
+            "value": "10",
+            "provision_type": "fixed"
+        },
+        "RESET_PAUSE_DURATION": {
+            "name": "Reset pause duration",
+            "description": "",
+            "value": "1800",
+            "provision_type": "fixed"
+        }
+    }
+}

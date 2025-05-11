@@ -1,0 +1,19 @@
+name: agent_smith
+author: keremgegek
+version: 0.1.0
+description: Claude.
+aea_version: '>=1.0.0, <2.0.0'
+license: Apache-2.0
+fingerprint:
+  README.md: bafybeigkh3bwwjzgbl3jlcbovrf67ikisndygihsutgqlijhgie3z44ao4
+fingerprint_ignore_patterns: []
+agent: keremgegek/agent_smith:0.1.0:bafybeicyccipmgyqxtdp4nc34wsx2rdqajyev24s5fjrvlo45d7p3usc2m
+number_of_agents: 1
+deployment: {}
+public_id: keremgegek/configs:0.19.0
+config:
+  environment:
+    CLAUDE_API_KEY: ''
+    SEED_PHRASE: ''
+    MCP_PATH: ''
+  SAFE_CONTRACT_ADDRESSES: ${SAFE_CONTRACT_ADDRESSES:str:0x0000000000000000000000000000000000000000}

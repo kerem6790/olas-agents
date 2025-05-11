@@ -1,0 +1,104 @@
+name: task_execution
+author: valory
+version: 0.1.0
+type: skill
+description: A skill used for monitoring and executing tasks.
+license: Apache-2.0
+aea_version: '>=1.0.0, <2.0.0'
+fingerprint:
+  __init__.py: bafybeidqhvvlnthkbnmrdkdeyjyx2f2ab6z4xdgmagh7welqnh2v6wczx4
+  behaviours.py: bafybeiglcdlffxsv2ym4njxtqnbrsvzp5skpc5aj5lzybvoboqz5krxsq4
+  dialogues.py: bafybeib6xkxutxwctbegngexys3smael4rzkrkdlbwi7f5lgcvmag3siqm
+  handlers.py: bafybeifcagftjvcgkva76iisq7ymfuvwna43jsyrgl24tu5v6qzaa6aoje
+  models.py: bafybeiedvetvbvd3hd455kfg7ms476r5qigji4dns4m4wdnipac726dus4
+  utils/__init__.py: bafybeiccdijaigu6e5p2iruwo5mkk224o7ywedc7nr6xeu5fpmhjqgk24e
+  utils/apis.py: bafybeigu73lfz3g3mc6iupisrvlsp3fyl4du3oqlyajgdpfvtqypddh3w4
+  utils/benchmarks.py: bafybeib5xjfeu2jezcj4ofl36qnznhbrjad6hqiwavebg5cidkl2pwlhz4
+  utils/cost_calculation.py: bafybeighafxied73w3mcmgziwfp3u2x6t4qlztw4kyekyq2ddgyhdge74q
+  utils/ipfs.py: bafybeiev3mtt5ubsiykigmsxxyf4abevi7qsektcrxbgrirvidc36zjlve
+  utils/task.py: bafybeicb6nqd475ul6mz4hcexpva33ivkn4fygicgmlb4clu5cuzr34diy
+fingerprint_ignore_patterns: []
+connections:
+- valory/ledger:0.19.0:bafybeibiayfscw4badpr545f47hsvc2r5lgfpgzib5q4h4u6kkosdsytby
+- valory/ipfs:0.1.0:bafybeigjspoceazd5roxo4pcqcgyu3ozixkdoc44domwcaumt2zwoz2x3m
+- valory/p2p_libp2p_client:0.1.0:bafybeic6ayusdwy4dks75njwk32ac7ur7salgllwf4fdc34ue5z2k5iz4q
+contracts:
+- valory/agent_mech:0.1.0:bafybeigs3jle7n57sqwdnwi2egfia6ingt7wxhzykft7ssasjj26ig32xi
+protocols:
+- valory/acn_data_share:0.1.0:bafybeih5ydonnvrwvy2ygfqgfabkr47s4yw3uqxztmwyfprulwfsoe7ipq
+- valory/contract_api:1.0.0:bafybeid247uig2ekykdumh7ewhp2cdq7rchaeqjj6e7urx35zfpdl5zrn4
+- valory/ledger_api:1.0.0:bafybeihmqzcbj6t7vxz2aehd5726ofnzsfjs5cwlf42ro4tn6i34cbfrc4
+- valory/default:1.0.0:bafybeifqcqy5hfbnd7fjv4mqdjrtujh2vx3p2xhe33y67zoxa6ph7wdpaq
+- valory/ipfs:0.1.0:bafybeifi2nri7sprmkez4rqzwb4lnu6peoy3bax5k6asf6k5ms7kmjpmkq
+- valory/http:1.0.0:bafybeih4azmfwtamdbkhztkm4xitep3gx6tfdnoz6tvllmaqnhu3klejfa
+skills:
+- valory/abstract_round_abci:0.1.0:bafybeiba3zhx5drsf7ailfboeuvwykocmkffs2j426u4q7d4erig67lyhm
+behaviours:
+  task_execution:
+    args: {}
+    class_name: TaskExecutionBehaviour
+handlers:
+  acn_data_share_handler:
+    args: {}
+    class_name: AcnHandler
+  contract_handler:
+    args: {}
+    class_name: ContractHandler
+  ipfs_handler:
+    args: {}
+    class_name: IpfsHandler
+  ledger_handler:
+    args: {}
+    class_name: LedgerHandler
+  mech_http_handler:
+    args: {}
+    class_name: MechHttpHandler
+models:
+  acn_data_share_dialogues:
+    args: {}
+    class_name: AcnDataShareDialogues
+  contract_dialogues:
+    args: {}
+    class_name: ContractDialogues
+  default_dialogues:
+    args: {}
+    class_name: DefaultDialogues
+  ipfs_dialogues:
+    args: {}
+    class_name: IpfsDialogues
+  ledger_dialogues:
+    args: {}
+    class_name: LedgerDialogues
+  mech_http_dialogues:
+    args: {}
+    class_name: MechHttpDialogues
+  params:
+    args:
+      agent_index: 0
+      api_keys: {}
+      tools_to_package_hash: {}
+      from_block_range: 50000
+      num_agents: 4
+      mech_to_config: {}
+      polling_interval: 30.0
+      task_deadline: 240.0
+      max_block_window: 500
+      use_slashing: false
+      timeout_limit: 3
+      slash_cooldown_hours: 3
+      slash_threshold_amount: 10000000000000000
+      light_slash_unit_amount: 5000000000000000
+      serious_slash_unit_amount: 8000000000000000
+      mech_marketplace_address: '0x0000000000000000000000000000000000000000'
+      default_chain_id: gnosis
+    class_name: Params
+dependencies:
+  py-multibase:
+    version: ==1.0.3
+  py-multicodec:
+    version: ==0.2.1
+  eth-abi:
+    version: ==4.0.0
+  PyYAML:
+    version: ==6.0.1
+is_abstract: false

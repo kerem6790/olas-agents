@@ -1,0 +1,22 @@
+name: rsk_web3_tool
+author: keremgegek
+version: 0.1.0
+type: custom
+description: Rootstock blockchain tools for Olas Mech
+license: Apache-2.0
+aea_version: '>=1.0.0, <2.0.0'
+fingerprint:
+  __init__.py: bafybeifnxrgw2zpkemhvnbxjkqg4sze2tg3qpmnqmqlhdgixbtmegwzox4
+  rsk_web3_tool.py: bafybeickigi5peiuhmsry2kcqu5z5fumrbuwccplasuabik7ok5z4q4dbq
+fingerprint_ignore_patterns: []
+entry_point: rsk_web3_tool.py
+callable: run
+dependencies:
+  web3:
+    version: '>=6.0.0'
+  eth-typing:
+    version: '>=3.0.0'
+  eth-utils:
+    version: '>=2.0.0'
+  eth-account:
+    version: '>=0.8.0'

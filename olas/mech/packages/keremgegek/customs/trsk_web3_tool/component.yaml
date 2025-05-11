@@ -1,0 +1,14 @@
+name: trsk_web3_tool
+author: keremgegek
+version: 0.1.0
+type: custom
+description: Tool description
+license: Apache-2.0
+aea_version: '>=1.0.0, <2.0.0'
+fingerprint:
+  __init__.py: bafybeifnxrgw2zpkemhvnbxjkqg4sze2tg3qpmnqmqlhdgixbtmegwzox4
+  trsk_web3_tool.py: bafybeidgcjwa4q6k5zyap5jcf3ruuuwtu3es6xtnv56br4jzcgs6q7v2mu
+fingerprint_ignore_patterns: []
+entry_point: trsk_web3_tool.py
+callable: run
+dependencies: {}
